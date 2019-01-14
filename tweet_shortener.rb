@@ -31,7 +31,7 @@ end
 
 def bulk_tweet_shortener(tweets)
   new_tweets = tweets.collect do |each|
-    word_substituter(each)
+    each = word_substituter(each)
   end
   new_tweets
 end
