@@ -11,13 +11,6 @@ def word_substituter(tweet)
     "at" => "@",
     "and" => "&"
   }
-  # arr = tweet.split(" ").to_a
-  # for each in arr
-  #   if words.keys.include?(each)
-  #     each = words.fetch(each)
-  #   end
-  # end
-  # arr.to_s
   arr = tweet.split(" ").to_a
   new_arr = arr.collect do |each|
     if words.keys.include?(each.downcase)
@@ -26,7 +19,7 @@ def word_substituter(tweet)
       each
     end
   end
-  new_arr.flatten.join(" ")
+  new_arr.join(" ")
 end
 
 def bulk_tweet_shortener(tweets)
