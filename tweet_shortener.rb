@@ -20,7 +20,7 @@ def word_substituter(tweet)
   # arr.to_s
   arr = tweet.split(" ").to_a
   new_arr = arr.collect do |each|
-    if words.keys.include?(each.downcase)
+    if words.keys.include?(each)
       each = words.fetch(each)
     else
       each
