@@ -18,7 +18,7 @@ def word_substituter(tweet)
   #   end
   # end
   # arr.to_s
-  arr.collect do |each|
+  tweet.collect do |each|
     if words.keys.include?(each)
       each = words.fetch(each)
     end
