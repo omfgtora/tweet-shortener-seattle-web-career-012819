@@ -22,6 +22,8 @@ def word_substituter(tweet)
   arr.collect do |each|
     if words.keys.include?(each)
       each = words.fetch(each)
+    else
+      each = each
     end
   end
 end
