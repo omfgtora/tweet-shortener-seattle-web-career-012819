@@ -19,13 +19,14 @@ def word_substituter(tweet)
   # end
   # arr.to_s
   arr = tweet.split(" ").to_a
-  arr.collect do |each|
+  arr.collect! do |each|
     if words.keys.include?(each)
       each = words.fetch(each)
     else
       each
     end
   end
+  arr.flatten
 end
 
 def bulk_tweet_shortener(tweets)
