@@ -18,7 +18,11 @@ def word_substituter(tweet)
   #   end
   # end
   # arr.to_s
-  arr.collect do |
+  arr.collect do |each|
+    if words.keys.include?(each)
+      each = words.fetch(each)
+    end
+  end
 end
 
 def bulk_tweet_shortener(tweets)
