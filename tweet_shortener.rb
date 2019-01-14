@@ -19,7 +19,7 @@ def word_substituter(tweet)
   # end
   # arr.to_s
   arr = tweet.split(" ").to_a
-  arr.collect! do |each|
+  arr.collect do |each|
     if words.keys.include?(each)
       each = words.fetch(each)
     else
@@ -30,7 +30,7 @@ def word_substituter(tweet)
 end
 
 def bulk_tweet_shortener(tweets)
-  tweets.collect! do |each|
+  tweets.collect do |each|
     word_substituter(each)
   end
 end
