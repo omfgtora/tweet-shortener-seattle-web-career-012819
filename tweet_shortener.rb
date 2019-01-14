@@ -18,7 +18,8 @@ def word_substituter(tweet)
   #   end
   # end
   # arr.to_s
-  tweet.collect do |each|
+  arr = tweet.split(" ").to_a
+  arr.collect do |each|
     if words.keys.include?(each)
       each = words.fetch(each)
     end
