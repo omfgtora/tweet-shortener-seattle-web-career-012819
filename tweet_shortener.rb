@@ -31,9 +31,10 @@ end
 
 def bulk_tweet_shortener(tweets)
   new_tweets = tweets.collect do |each|
+    puts "From: #{each}"
     each = word_substituter(each)
+    puts "To: #{each}"
   end
-  puts new_tweets
 end
 
 def selective_tweet_shortener(tweet)
