@@ -23,7 +23,7 @@ def word_substituter(tweet)
     if words.keys.include?(each)
       each = words.fetch(each)
     else
-      each = each
+      each
     end
   end
 end
